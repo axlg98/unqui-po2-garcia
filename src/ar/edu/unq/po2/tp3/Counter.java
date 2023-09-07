@@ -11,12 +11,16 @@ private ArrayList<Integer> listaDeNumeros = new ArrayList<Integer>();
 	
 	public int contarPares() {
 		int cantidad = 0;
-		for(Integer numero:listaDeNumeros) {
+		for(Integer numero:this.getNumeros()) {
 			if(numero % 2 == 0) {
 				cantidad += 1;
 			}
 		}
 		return cantidad;
+	}
+	
+	private ArrayList<Integer> getNumeros(){
+		return listaDeNumeros;
 	}
 	
 	public int contarImpares() {
