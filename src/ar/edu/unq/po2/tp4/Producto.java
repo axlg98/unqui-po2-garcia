@@ -7,10 +7,14 @@ public class Producto {
 	
 	public Producto (String c,Double p,boolean esParte) {
 			this.comida = c;
-			this.precio = p;
+			this.setPrecio(p);
 			this.esParteDelPrograma = esParte;
 	}
 	
+	public void setPrecio(Double precio) {
+		this.precio = precio;
+	}
+
 	public Producto (String c,Double p) {
 		this.comida = c;
 		this.precio = p;
@@ -32,5 +36,8 @@ public class Producto {
 		this.precio += precioCuidado;
 	}
 	
+	public Double precioConDesc(Double desc) {
+		return this.getPrecio() * desc;
+	}
 	 
 }
